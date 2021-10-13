@@ -1,0 +1,23 @@
+
+<form action="/action_page.php" method="post" @submit.prevent = "submit" class="was-validated">
+  <div class="container">
+    <p>Please fill in this form to create an account.</p>
+  
+    <input type="text"
+           placeholder="Enter Your Frist Name" 
+           name="firstName" 
+           v-model.trim = "firstName" required><br>
+              
+    <input type="text" placeholder="Enter Your Last Name" name="LastName" v-model.trim ="lastName" required><br>
+
+    <input type="text" placeholder="Enter Email" name="email" v-model.trim = "v$.email.$model" required><br>
+    <div v-if="v$.email.$error" class="text-danger"><p>Valid email is required.</p></div>
+
+    <input type="password" placeholder="Enter Password" name="psw" v-model.trim = "password" required>
+
+    <div class="clearfix">
+        <button type="" class="loginbtn">Losgin instead?</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
